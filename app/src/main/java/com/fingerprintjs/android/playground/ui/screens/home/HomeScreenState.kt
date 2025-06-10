@@ -27,6 +27,7 @@ data class HomeScreenState(
                             stabilityLevel = StabilityLevel.STABLE,
                             versionStart = Fingerprinter.Version.V_4,
                             versionEnd = Fingerprinter.Version.V_5,
+                            jsonSignal = "{}"
                         ),
                         FingerprintItemData(
                             signalName = "CPU Info V2",
@@ -34,6 +35,7 @@ data class HomeScreenState(
                             stabilityLevel = StabilityLevel.STABLE,
                             versionStart = Fingerprinter.Version.V_4,
                             versionEnd = Fingerprinter.Version.V_5,
+                            jsonSignal = "{}"
                         ),
                         FingerprintItemData(
                             signalName = "CPU Info V2",
@@ -41,6 +43,7 @@ data class HomeScreenState(
                             stabilityLevel = StabilityLevel.STABLE,
                             versionStart = Fingerprinter.Version.V_4,
                             versionEnd = Fingerprinter.Version.V_5,
+                            jsonSignal = "{}"
                         ),
                         FingerprintItemData(
                             signalName = "CPU Info V2",
@@ -48,6 +51,7 @@ data class HomeScreenState(
                             stabilityLevel = StabilityLevel.STABLE,
                             versionStart = Fingerprinter.Version.V_4,
                             versionEnd = Fingerprinter.Version.V_5,
+                            jsonSignal = "{}"
                         ),
                         FingerprintItemData(
                             signalName = "CPU Info V2",
@@ -55,6 +59,7 @@ data class HomeScreenState(
                             stabilityLevel = StabilityLevel.STABLE,
                             versionStart = Fingerprinter.Version.V_4,
                             versionEnd = Fingerprinter.Version.V_5,
+                            jsonSignal = "{}"
                         ),
                         FingerprintItemData(
                             signalName = "CPU Info V2",
@@ -62,6 +67,7 @@ data class HomeScreenState(
                             stabilityLevel = StabilityLevel.STABLE,
                             versionStart = Fingerprinter.Version.V_4,
                             versionEnd = Fingerprinter.Version.V_5,
+                            jsonSignal = "{}"
                         ),
                     )
                 )

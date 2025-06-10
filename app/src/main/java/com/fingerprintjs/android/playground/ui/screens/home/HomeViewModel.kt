@@ -1,5 +1,6 @@
 package com.fingerprintjs.android.playground.ui.screens.home
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fingerprintjs.android.fingerprint.Fingerprinter
@@ -116,6 +117,9 @@ class HomeViewModel @Inject constructor(
                     stabilityLevel = stabilityLevel
                 ).orEmpty()
             }
+
+            val signalsJson = fingerprinter.getFingerprintingSignalsProvider()?.getSignalsJSON(signals)
+            Log.d("JSON SIGNALS", "$signalsJson")
             fingerprintScreenStateMutable.emit(
                 FingerprintScreenState(
                     version = version,

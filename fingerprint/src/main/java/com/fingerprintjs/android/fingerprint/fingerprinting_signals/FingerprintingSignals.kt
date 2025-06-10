@@ -1044,4 +1044,3 @@ public class TimezoneSignal(
         )
     }
 }
-// endregion

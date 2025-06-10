@@ -13,6 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import android.util.Log
 import com.fingerprintjs.android.fingerprint.Fingerprinter
 import com.fingerprintjs.android.fingerprint.signal_providers.StabilityLevel
 import com.fingerprintjs.android.playground.ui.foundation.SignalItem
@@ -44,6 +45,7 @@ fun PreviewInFingerprintScreen() {
 data class FingerprintItemData(
     val signalName: String,
     val signalValue: String,
+    val jsonSignal: Any,
     val stabilityLevel: StabilityLevel,
     val versionStart: Fingerprinter.Version,
     val versionEnd: Fingerprinter.Version
@@ -52,6 +54,7 @@ data class FingerprintItemData(
         val EXAMPLE = FingerprintItemData(
             signalName = "Android ID",
             signalValue = FP_SIGNALS_PREVIEW_LONG_VALUE,
+            jsonSignal = "{}",
             stabilityLevel = StabilityLevel.STABLE,
             versionStart = Fingerprinter.Version.V_2,
             versionEnd = Fingerprinter.Version.V_5,

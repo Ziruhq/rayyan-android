@@ -1,6 +1,7 @@
 package com.fingerprintjs.android.playground.ui.screens.home
 
 import android.annotation.SuppressLint
+import android.util.Log
 import com.fingerprintjs.android.fingerprint.DeviceIdResult
 import com.fingerprintjs.android.fingerprint.Fingerprinter
 import com.fingerprintjs.android.fingerprint.fingerprinting_signals.FingerprintingSignal
@@ -59,6 +60,7 @@ private fun FingerprintingSignal<*>.toFingerprintItemData(): FingerprintItemData
     return FingerprintItemData(
         signalName = this.humanName,
         signalValue = this.humanValue,
+        jsonSignal = this.jsonifiableValue,
         stabilityLevel = this.info.stabilityLevel,
         versionStart = this.info.addedInVersion,
         versionEnd = this.info.removedInVersion ?: Fingerprinter.Version.latest,

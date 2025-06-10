@@ -45,7 +45,7 @@ fun DeviceIdScreen(
         parameters = {
             ValuePicker(
                 modifier = Modifier.weight(1f),
-                title = "Version",
+                title = "Versions",
                 values = Fingerprinter.Version.values().toList(),
                 currentValue = deviceIdScreenState.version,
                 valueDescription = { this.description },

@@ -22,6 +22,9 @@ import com.fingerprintjs.android.fingerprint.tools.FingerprintingLegacySchemeSup
 import com.fingerprintjs.android.fingerprint.tools.FingerprintingLegacySchemeSupportExtensions.getInstalledAppsSignals
 import com.fingerprintjs.android.fingerprint.tools.FingerprintingLegacySchemeSupportExtensions.getOsBuildSignals
 import com.fingerprintjs.android.fingerprint.tools.SignalsUtils
+import com.fingerprintjs.android.fingerprint.helpers.Configurators
+import com.fingerprintjs.android.fingerprint.helpers.toFingerprintItemData
+import org.json.JSONObject
 
 /**
  * A class that provides signals used in the [Fingerprinter's][com.fingerprintjs.android.fingerprint.Fingerprinter]
@@ -148,6 +151,15 @@ public class FingerprintingSignalsProvider internal constructor(
 
             }
         }
+    }
+
+    @WorkerThread
+    public fun getSignalsJSON(signals: List<FingerprintingSignal<*>>): Any {
+        val signalsList = signals.map{ it.toFingerprintItemData() }
+        val signalsMap = signalsList.associate { it.signalName to it.signalData }
+        val signalsMapJSON = Configurators.toJsonMap(signalsMap)
+
+        return signalsMapJSON
     }
 
     @get:WorkerThread
