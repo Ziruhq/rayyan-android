@@ -154,12 +154,12 @@ public class FingerprintingSignalsProvider internal constructor(
     }
 
     @WorkerThread
-    public fun getSignalsJSON(signals: List<FingerprintingSignal<*>>): Any {
+    public fun getSignalsMap(signals: List<FingerprintingSignal<*>>): Any {
         val signalsList = signals.map{ it.toFingerprintItemData() }
-        val signalsMap = signalsList.associate { it.signalName to it.signalData }
-        val signalsMapJSON = Configurators.toJsonMap(signalsMap)
+        val signalsTruc = signalsList.associate { it.signalName to it.signalData }
+        val signalsMap = Configurators.toJsonMap(signalsTruc)
 
-        return signalsMapJSON
+        return signalsMap
     }
 
     @get:WorkerThread

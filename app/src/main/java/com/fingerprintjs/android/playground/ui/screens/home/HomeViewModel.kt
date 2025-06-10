@@ -118,7 +118,7 @@ class HomeViewModel @Inject constructor(
                 ).orEmpty()
             }
 
-            val signalsJson = fingerprinter.getFingerprintingSignalsProvider()?.getSignalsJSON(signals)
+            val signalsJson = fingerprinter.getFingerprintingSignalsProvider()?.getSignalsMap(signals)
             Log.d("JSON SIGNALS", "$signalsJson")
             fingerprintScreenStateMutable.emit(
                 FingerprintScreenState(
